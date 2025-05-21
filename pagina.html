@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vince - Escola Profissionalizante</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="icons_images/vince_logo6.png" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS personalizado -->
+  <link href="style.css" rel="stylesheet" />
+
+  <!-- Fonte Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap" rel="stylesheet" />
+
+  <!-- Biblioteca Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Script JavaScript principal -->
+  <script src="script.js" defer></script>
+</head>
+
+<body class="roboto-fontype">
+
+  <!-- Botão light/dark mode-->
+  <button id="theme-switch">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path
+        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path
+        d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+    </svg>
+  </button>
+
+  <!-- Navbar -->
+  <nav class="colorbg navbar-expand-lg navbar-dark navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="icons_images/vince_logo6.png" alt="Logo Vince" class="logo-vince d-inline-block align-text-top" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrossel pessoas -->
+  <div id="pessoas" class="container-fluid px-0 position-relative">
+    <img src="icons_images/vince_logo6.png" alt="Logo Vince" class="logo-sobre-carrossel" />
+    <div id="carrosselpessoas" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrosselpessoas" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrosselpessoas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrosselpessoas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pessoas_image/conny-schneider-xuTJZ7uD7PI-unsplash.jpg" class="d-block w-100 carousel-img" alt="pessoas 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="pessoas_image/estudante.jpg" class="d-block w-100 carousel-img" alt="pessoas 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="pessoas_image/mulher.jpg" class="d-block w-100 carousel-img" alt="pessoas 3" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards flip -->
+  <section class="container my-5 hidden" id="cursos">
+    <h2 class="mb-4 text-center">Nossos Cursos</h2>
+    <div class="row justify-content-center">
+      <!-- Card: Desenvolvimento Web -->
+      <div class="col-md-4 mb-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image: url('conteudos_images/desenvolvimento_web.png');">
+              <h5 class="card-title">Desenvolvimento Web</h5>
+            </div>
+            <div class="flip-card-back">
+              <h5>Desenvolvimento Web</h5>
+              <p>Crie sites modernos com HTML, CSS, JavaScript e frameworks como React.</p>
+              <a href="#" class="btn btn-success">Matrícula</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Cibersegurança -->
+      <div class="col-md-4 mb-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image: url('conteudos_images/cybersegurança.jpeg');">
+              <h5 class="card-title">Cibersegurança</h5>
+            </div>
+            <div class="flip-card-back">
+              <h5>Cibersegurança</h5>
+              <p>Aprenda a proteger sistemas, realizar testes de invasão e aplicar criptografia.</p>
+              <a href="#" class="btn btn-success">Matrícula</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Ciência de Dados -->
+      <div class="col-md-4 mb-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front" style="background-image: url('conteudos_images/cienciadedados.jpeg');">
+              <h5 class="card-title">Ciência de Dados</h5>
+            </div>
+            <div class="flip-card-back">
+              <h5>Ciência de Dados</h5>
+              <p>Domine análise, Python, estatística, machine learning e ferramentas de BI.</p>
+              <a href="#" class="btn btn-success">Matrícula</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrossel depoimentos -->
+  <section id="depoimentos">
+    <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <!-- Depoimento 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-text">
+            <p>“O conteúdo é excelente e os professores são super dedicados. Me ajudou muito a crescer profissionalmente.”</p>
+            <h5>— Maria Souza</h5>
+            <p class="testimonial-role">Analista de Sistemas</p>
+          </div>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-text">
+            <p>“Já fiz outros cursos antes, mas nenhum tão completo e claro quanto este. Recomendo demais!”</p>
+            <h5>— João Lima</h5>
+            <p class="testimonial-role">Desenvolvedor Front-End</p>
+          </div>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-text">
+            <p>“Me surpreendi com o suporte e a qualidade das aulas. Foi uma experiência transformadora.”</p>
+            <h5>— Fernanda Alves</h5>
+            <p class="testimonial-role">Especialista em Cibersegurança</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Perguntas frequentes (FAQ) -->
+  <section class="container my-5 hidden" id="perguntas">
+    <h2 class="mb-4 text-center">Perguntas Frequentes</h2>
+    <div class="accordion" id="accordionFAQ">
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+            aria-expanded="true" aria-controls="faq1">
+            Quais os requisitos para ingressar nos cursos?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            Não é necessário ter conhecimentos prévios. Oferecemos conteúdo desde o básico até o avançado.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+            aria-expanded="false" aria-controls="faq2">
+            Como funciona a matrícula?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            A matrícula é feita online. Basta clicar no botão “Matrícula” no curso desejado e preencher o formulário.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"
+            aria-expanded="false" aria-controls="faq3">
+            Os cursos oferecem certificado?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#accordionFAQ">
+          <div class="accordion-body">
+            Sim, todos os nossos cursos oferecem certificado reconhecido pelo mercado.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section class="container my-5 hidden" id="contato">
+    <h2 class="mb-4 text-center">Contato</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" id="nome" class="form-control" placeholder="Seu nome" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" class="form-control" placeholder="seu@email.com" required />
+      </div>
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="colorbg text-center text-light py-3">
+    <p class="mb-0">&copy; 2025 Vince Escola Profissionalizante</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

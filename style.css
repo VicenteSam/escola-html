@@ -1,0 +1,385 @@
+/* ============================
+   VARIÁVEIS DE CORES
+============================ */
+:root {
+  /* Paleta de cores principal */
+  --pale-dogwood: #d0b8acff;
+  --picton-blue: #00a6fbff;
+  --sea-green: #0c8346ff;
+  --space-cadet: #2b2d42ff;
+  --cambridge-blue: #6e9e79ff;
+  --tea-green: #bfffbcff;
+  --xanthous: #ffbc42ff;
+  --naples-yellow: #f9db6dff;
+  --prussian-blue: #003459ff;
+  --ice-blue: #9eefe5ff;
+
+  /* Cores para modo claro */
+  --text-color-flip: #ffffff;
+  --text-color: #000;
+  --bg-color: #faf8f5;
+  --bg-element-color: #ffffff;
+  --hover-color: #d8d8d8;
+  --transparent: #00000099;
+  --border-color: #6e9e79ff;
+  --flip-color: #282b30;
+
+  /* Ícones */
+  --svg-basecolor: #ffffff;
+  --svg-bgcolor: #000;
+}
+
+/* ============================
+   MODO ESCURO (Dark Mode)
+============================ */
+.darkmode {
+  --text-color: #ffffff;
+  --bg-color: #282b30;
+  --bg-element-color: #424549;
+  --bg-element-body-color: #faf8f541;
+  --hover-color: #d8d8d8;
+  --transparent: #faf8f599;
+  --border-color: #000;
+  --flip-color: #424549;
+
+  --svg-basecolor: #000000;
+  --svg-bgcolor: #ffffff;
+}
+
+/* ============================
+   ESTILOS GERAIS
+============================ */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--bg-element-color) !important;
+  color: var(--text-color) !important;
+  border: 0.5px solid var(--border-color) !important;
+  border-radius: 4px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #bbb !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--border-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: var(--bg-element-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* ============================
+   NAVBAR & LOGO
+============================ */
+.navbar {
+  height: 70px;
+  padding: 0 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logo-vince {
+  max-height: 100px;
+  height: auto;
+  width: auto;
+}
+
+/* ============================
+   MODO RESPONSIVO
+============================ */
+@media (max-width: 1200px) {
+  .panorama-bg {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-sobre-carrossel {
+    width: 80px;
+    top: 10px;
+  }
+}
+
+/* ============================
+   BOTÃO DE TEMA (LIGHT/DARK)
+============================ */
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--svg-bgcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#theme-switch svg {
+  fill: var(--svg-basecolor);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+/* ============================
+   CARROSSEL & LOGO SOBREPOSTA
+============================ */
+#equipe {
+  position: relative;
+}
+
+.logo-sobre-carrossel {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 10;
+}
+
+.carousel-caption-custom {
+  display: none;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+/* ============================
+   ACORDEÃO (FAQ)
+============================ */
+.accordion-button {
+  color: var(--text-color);
+  background-color: var(--bg-element-color);
+  border: 0.5px solid var(--border-color);
+}
+
+.accordion-button:focus {
+  border-color: var(--border-color);
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-element-color);
+  color: var(--text-color);
+}
+
+.accordion-body {
+  background-color: var(--bg-element-body-color);
+  color: var(--text-color);
+}
+
+.accordion-item {
+  background-color: var(--bg-element-color);
+  border-color: var(--border-color);
+}
+
+/* ============================
+   FONTES
+============================ */
+.roboto-fontype {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* ============================
+   BOTÕES
+============================ */
+.btn-primary {
+  background-color: var(--bg-color);
+  border-color: var(--border-color);
+  color: var(--svg-bgcolor);
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color);
+  border-color: var(--prussian-blue);
+  color: var(--svg-bgcolor);
+}
+
+/* ============================
+   CARDS & TESTEMUNHOS
+============================ */
+.card {
+  border-color: var(--cambridge-blue);
+}
+
+.colorbg {
+  background-color: var(--sea-green);
+}
+
+.testimonial-text {
+  background-color: var(--bg-element-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  font-style: italic;
+  transition: all 0.4s ease;
+}
+
+.testimonial-text h5 {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--sea-green);
+}
+
+.testimonial-role {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: var(--cambridge-blue);
+  font-style: normal;
+}
+
+/* ============================
+   FLIP CARDS
+============================ */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-front {
+  background-color: var(--bg-color);
+  align-items: flex-end;
+  color: var(--bg-color);
+}
+
+.flip-card-front h5 {
+  background: var(--transparent);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.flip-card-back {
+  background-color: var(--flip-color);
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color-flip);
+  position: relative;
+}
+
+.flip-card-back h5 {
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.flip-card-back .matricular-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: var(--picton-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flip-card-back .matricular-btn:hover {
+  background-color: var(--prussian-blue);
+}
+
+/* ============================
+   TOAST
+============================ */
+.toast {
+  background-color: var(--bg-element-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.toast-header {
+  background-color: var(--bg-element-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toast-header img {
+  height: 35px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* ============================
+   SCROLL EFFECT
+============================ */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
